@@ -38,6 +38,7 @@
 
     /* Font sizes */
     --font-size-medium: 1.125rem;
+    --font-size-title-mobile: 2.25rem;
 }
 
 *,
@@ -135,6 +136,69 @@ button, .btn {
 
 .header-buttons .btn-trial:hover {
     background-color: var(--btn-color-hover);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    width: 100%;
+}
+
+.hero .container {
+    padding: 80px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero-title {
+    color: var(--color-primary-500);
+    font-size: var(--font-size-title-mobile);
+}
+
+.hero-subtitle {
+    color: var(--color-primary-500);
+    font-size: var(--font-size-medium);
+    line-height: 1.9;
+}
+
+.btn-hero-cta {
+    padding: 20px 40px;
+    background-color: var(--color-primary-500);
+    border-radius: var(--btn-border-radius);
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
+    width: 232px;
+    height: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.btn-hero-cta i {
+    position: absolute;
+    right: 15px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 191px;
+    background-color: var(--color-primary-100);
 }
 
 /* =========================
