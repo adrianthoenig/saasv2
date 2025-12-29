@@ -224,6 +224,14 @@ button, .btn {
 
 .features {
     margin-bottom: 100px;
+    position: relative;
+}
+
+.features .decorative-footprint {
+    height: 209px;
+    position: absolute;
+    top: 40px;
+    left: 0;
 }
 
 .features .container {
@@ -330,6 +338,11 @@ button, .btn {
     }
 
     /* --- FEATURES --- */
+    .features .decorative-footprint {
+        height: 270px;
+        top: 30px;
+    }
+
     .features .container {
         padding: 100px 20px 0;
     }
@@ -373,6 +386,7 @@ button, .btn {
     .hero .container {
         flex-direction: row;
         padding: 140px 32px;
+        justify-content: space-between;
         gap: 0;
     }
 
@@ -393,5 +407,41 @@ button, .btn {
     .btn-hero {
         width: 219px;
         height: 63px;
+    }
+
+    /* --- FEATURES --- */
+    .features .decorative-footprint {
+        height: auto;
+        top: 62px;
+        left: -20px;
+    }
+
+    .features .container {
+        padding: 140px 32px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .feautres-content {
+        align-items: flex-start;
+    }
+
+    .features-info {
+        align-items: flex-start;
+    }
+
+    .features-title,
+    .features-para {
+        text-align: left;
+    }
+
+    .features-para {
+        max-width: 436px;
+    }
+
+    .features-image {
+        width: 560px;
+        height: 384px;
     }
 }
