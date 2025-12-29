@@ -44,6 +44,8 @@
 
     /* Font sizes (FEATURES) */
     --m-features-title-font-size: 2.25rem;
+    --t-features-title-font-size: 3.375rem;
+    --d-features-title-font-size: 4rem;
 }
 
 *,
@@ -328,7 +330,27 @@ button, .btn {
     }
 
     /* --- FEATURES --- */
+    .features .container {
+        padding: 100px 20px 0;
+    }
 
+    .features-title {
+        font-size: var(--t-features-title-font-size);
+    }
+
+    .title-highlight {
+        left: 200px;
+        bottom: -10px;
+    }
+
+    .features-para {
+        max-width: 728px;
+    }
+
+    .features-image {
+        width: 561px;
+        height: 350px;
+    }
 
 }
 
