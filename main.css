@@ -1,0 +1,176 @@
+/* =========================
+   FONTS
+   ========================= */
+
+@font-face {
+    font-family: Inter;
+    src: url('./fonts/inter.ttf');
+}
+
+/* =========================
+   VARIABLES AND RESET
+   ========================= */
+
+:root {
+    /* Primary colors */
+    --color-primary-50: #DCEBFE;
+    --color-primary-100: #C4DEFD;
+    --color-primary-200: #A7CDFC;
+    --color-primary-300: #8ABDFB;
+    --color-primary-400: #6CACFA;
+    --color-primary-500: #4F9CF9;
+    --color-primary-600: #4282CF;
+    --color-primary-700: #3568A6;
+    --color-white: #FFFFFF;
+
+    /* Button colors */
+    --btn-yellow: #FFE492;
+    --btn-yellow-hover: #E6CF83;
+
+    --btn-color: #043873;
+    --btn-color-hover: #032A5C;
+
+    /* Border radius */
+    --btn-border-radius: 8px;
+
+    /* Project fonts */
+    --font-default: Inter;
+
+    /* Font sizes */
+    --font-size-medium: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, video, picture {
+    display: block;
+}
+
+body {
+    font-family: var(--font-default), Arial, Helvetica, sans-serif;
+    background-color: var(--color-white);
+}
+
+button, .btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+    width: 100%;
+    height: 56px;
+}
+
+.site-header .container {
+    max-width: 100%;
+    min-width: 320px;
+    padding: 16px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    cursor: pointer;
+    height: 24px;
+    width: auto;
+    object-fit: cover;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    color: var(--color-primary-500);
+    font-size: 2rem;
+}
+
+.header-buttons {
+    display: none;
+}
+
+.header-buttons .btn {
+    border-radius: var(--btn-border-radius);
+    padding: 18px 40px;
+    font-size: var(--font-size-medium);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header-buttons .btn-login {
+    background-color: var(--btn-yellow);
+    font-size: var(--font-size-medium);
+    color: var(--btn-color);
+}
+
+.header-buttons .btn-login:hover {
+    background-color: var(--btn-yellow-hover);
+}
+
+.header-buttons .btn-trial {
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
+    position: relative;
+    padding-right: 44px;
+}
+
+.header-buttons .btn-trial i {
+    position: absolute;
+    right: 15px;
+}
+
+.header-buttons .btn-trial:hover {
+    background-color: var(--btn-color-hover);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (min-width: 768px) {
+    /* TABLETS */
+    .site-header {
+        height: 66px;
+    }
+
+    .site-header .container {
+        padding: 16px 32px;
+    }
+
+    .header-logo img {
+        height: 34px;
+    }
+
+    .hamburger-menu {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width: 1152px) {
+    /* Desktop */
+    .site-header .container {
+        padding: 30px 32px;
+    }
+
+    .header-buttons {
+        height: 60px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+}
