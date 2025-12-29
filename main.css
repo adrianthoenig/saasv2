@@ -250,6 +250,14 @@ button, .btn {
 .features-title {
     font-size: var(--m-features-title-font-size);
     text-align: center;
+    position: relative;
+}
+
+.title-highlight {
+    position: absolute;
+    z-index: -1;
+    bottom: -12px;
+    left: 20px;
 }
 
 .features-para {
@@ -318,6 +326,9 @@ button, .btn {
         width: 551px;
         height: 367px;
     }
+
+    /* --- FEATURES --- */
+
 
 }
 
