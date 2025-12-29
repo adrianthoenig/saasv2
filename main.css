@@ -65,6 +65,7 @@ img, video, picture {
 body {
     font-family: var(--font-default), Arial, Helvetica, sans-serif;
     background-color: var(--color-white);
+    overflow-x: hidden;
 }
 
 button, .btn {
@@ -78,10 +79,6 @@ button, .btn {
 /* =========================
    UTILITIES
    ========================= */
-
-.w-100 {
-    width: 100%;
-}
 
 
 /* Body buttons (for CTA's) */
@@ -100,6 +97,33 @@ button, .btn {
 .btn-body-cta:hover {
     background-color: var(--btn-color-hover);
 
+}
+
+/* =========================
+   SECTION INFORMATION
+   ========================= */
+
+.section-title {
+    font-size: var(--m-features-title-font-size);
+    text-align: center;
+    position: relative;
+}
+
+.section-para {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-para);
+    text-align: center;
+    line-height: var(--font-line-height-para);
+}
+
+.section-padding {
+    padding: 80px 16px;
+}
+
+.image-wrapper {
+    min-width: 286px;
+    height: 177px;
+    background-color: var(--color-primary-100);
 }
 
 /* =========================
@@ -179,7 +203,6 @@ button, .btn {
    ========================= */
 
 .hero .container {
-    padding: 80px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,12 +256,6 @@ button, .btn {
     background-color: var(--btn-color-hover);
 }
 
-.hero-image {
-    min-width: 286px;
-    height: 191px;
-    background-color: var(--color-primary-100);
-}
-
 /* =========================
    FEATURES
    ========================= */
@@ -278,12 +295,6 @@ button, .btn {
     gap: 24px;
 }
 
-.features-title {
-    font-size: var(--m-features-title-font-size);
-    text-align: center;
-    position: relative;
-}
-
 .title-highlight {
     position: absolute;
     z-index: -1;
@@ -291,25 +302,12 @@ button, .btn {
     left: 20px;
 }
 
-.features-para {
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-para);
-    text-align: center;
-    line-height: var(--font-line-height-para);
-}
-
-.features-image {
-    min-width: 286px;
-    height: 177px;
-    background-color: var(--color-primary-100);
-}
-
 /* =========================
    COLLABORATION
    ========================= */
 
 .collaboration .container {
-    padding: 0 16px;
+    padding: 0 16px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,23 +328,11 @@ button, .btn {
     gap: 24px;
 }
 
-.collaboration-title {
-    font-size: var(--m-features-title-font-size);
-    position: relative;
-}
-
 .collab-title-highlight {
     position: absolute;
     z-index: -1;
     bottom: -10px;
     left: 20px;
-}
-
-.collaboration-para {
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-para);
-    text-align: center;
-    line-height: var(--font-line-height-para);
 }
 
 .widget-work-together {
@@ -356,11 +342,50 @@ button, .btn {
 }
 
 /* =========================
+   CUSTOMIZATION
+   ========================= */
+
+.customization .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.customization-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.customization-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 
 @media (min-width: 768px) {
     /* TABLETS */
+
+    /* --- UTILITIES --- */
+    .section-title {
+        font-size: var(--font-size-title-tablet);
+    }
+
+    .section-para {
+        max-width: 728px;
+    }
+
+    .image-wrapper {
+        width: 551px;
+        height: 367px;
+    }
 
     /* --- HEADER --- */
     .site-header {
@@ -388,11 +413,6 @@ button, .btn {
         font-size: var(--font-size-title-tablet);
     }
 
-    .hero-image {
-        width: 551px;
-        height: 367px;
-    }
-
     /* --- FEATURES --- */
     .features .decorative-footprint {
         height: 270px;
@@ -403,45 +423,44 @@ button, .btn {
         padding: 100px 20px 0;
     }
 
-    .features-title {
-        font-size: var(--t-features-title-font-size);
-    }
-
     .title-highlight {
         left: 200px;
         bottom: -10px;
     }
 
-    .features-para {
-        max-width: 728px;
-    }
-
-    .features-image {
-        width: 561px;
-        height: 350px;
-    }
-
     /* --- COLLABORATION --- */
     .collaboration .container {
-        padding: 20px 0;
-    }
-
-    .collaboration-title {
-        font-size: var(--t-features-title-font-size);
-    }
-
-    .collaboration-para {
-        max-width: 728px;
+        padding: 0 20px 100px;
     }
 
     .widget-work-together {
         height: 420px;
     }
 
+    /* --- CUSTOMIZATION --- */
+    .customization .container {
+        padding: 100px 32px;
+    }
+
 }
 
 @media (min-width: 1152px) {
     /* Desktop */
+
+    /* --- UTILITIES --- */
+    .section-title,
+    .section-para {
+        text-align: left;
+    }
+
+    .section-title {
+        font-size: var(--font-size-title-desktop);
+    }
+
+    .image-wrapper {
+        width: 560px;
+        height: 384px;
+    }
 
      /* --- HEADER --- */
     .site-header .container {
@@ -505,18 +524,8 @@ button, .btn {
         align-items: flex-start;
     }
 
-    .features-title,
-    .features-para {
-        text-align: left;
-    }
-
     .features-para {
         max-width: 436px;
-    }
-
-    .features-image {
-        width: 560px;
-        height: 384px;
     }
 
     /* --- COLLABORATION --- */
@@ -536,16 +545,26 @@ button, .btn {
         align-items: flex-start;
     }
 
-    .collaboration-title,
-    .collaboration-para {
-        text-align: left;
-    }
-
     .collaboration-para {
         max-width: 520px;
     }
 
     .widget-work-together {
         height: 490px;
+    }
+
+    /* --- CUSTOMIZATION --- */
+    .customization .container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .customization-content {
+        align-items: flex-start;
+    }
+
+    .customization-info {
+        align-items: flex-start;
     }
 }
