@@ -35,6 +35,8 @@
 
     /* Project fonts */
     --font-default: Inter;
+    --font-weight-para: 300;
+    --font-line-height-para: 1.5;
 
     /* Font sizes (HERO) */
     --font-size-medium: 1.125rem;
@@ -79,6 +81,25 @@ button, .btn {
 
 .w-100 {
     width: 100%;
+}
+
+
+/* Body buttons (for CTA's) */
+.btn-body-cta {
+    width: 200px;
+    height: 70px;
+    padding: 20px 40px;
+    background-color: var(--color-primary-500);
+    border-radius: var(--btn-border-radius);
+    font-size: var(--font-default);
+    color: var(--color-white);
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-body-cta:hover {
+    background-color: var(--btn-color-hover);
+
 }
 
 /* =========================
@@ -272,31 +293,66 @@ button, .btn {
 
 .features-para {
     font-size: var(--font-size-medium);
-    font-weight: 300;
+    font-weight: var(--font-weight-para);
     text-align: center;
-    line-height: 1.5;
-}
-
-.btn-features-cta {
-    width: 200px;
-    height: 70px;
-    padding: 20px 40px;
-    background-color: var(--color-primary-500);
-    border-radius: var(--btn-border-radius);
-    font-size: var(--font-default);
-    color: var(--color-white);
-    text-align: center;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn-features-cta:hover {
-    background-color: var(--btn-color-hover);
+    line-height: var(--font-line-height-para);
 }
 
 .features-image {
     min-width: 286px;
     height: 177px;
     background-color: var(--color-primary-100);
+}
+
+/* =========================
+   COLLABORATION
+   ========================= */
+
+.collaboration .container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.collaboration-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.collaboration-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.collaboration-title {
+    font-size: var(--m-features-title-font-size);
+    position: relative;
+}
+
+.collab-title-highlight {
+    position: absolute;
+    z-index: -1;
+    bottom: -10px;
+    left: 20px;
+}
+
+.collaboration-para {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-para);
+    text-align: center;
+    line-height: var(--font-line-height-para);
+}
+
+.widget-work-together {
+    display: block;
+    height: 260px;
+    object-fit: cover;
 }
 
 /* =========================
@@ -365,6 +421,23 @@ button, .btn {
         height: 350px;
     }
 
+    /* --- COLLABORATION --- */
+    .collaboration .container {
+        padding: 20px 0;
+    }
+
+    .collaboration-title {
+        font-size: var(--t-features-title-font-size);
+    }
+
+    .collaboration-para {
+        max-width: 728px;
+    }
+
+    .widget-work-together {
+        height: 420px;
+    }
+
 }
 
 @media (min-width: 1152px) {
@@ -385,7 +458,7 @@ button, .btn {
     /* --- HERO --- */
     .hero .container {
         flex-direction: row;
-        padding: 140px 32px;
+        padding: 140px 32px 0;
         justify-content: space-between;
         gap: 0;
     }
@@ -410,6 +483,7 @@ button, .btn {
     }
 
     /* --- FEATURES --- */
+
     .features .decorative-footprint {
         height: auto;
         top: 62px;
@@ -417,7 +491,7 @@ button, .btn {
     }
 
     .features .container {
-        padding: 140px 32px;
+        padding: 140px 32px 0;
         flex-direction: row;
         justify-content: space-between;
         gap: 0;
@@ -443,5 +517,35 @@ button, .btn {
     .features-image {
         width: 560px;
         height: 384px;
+    }
+
+    /* --- COLLABORATION --- */
+    .collaboration .container {
+        padding: 0 32px 140px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .collaboration-content {
+        align-items: flex-start;
+        order: 1;
+    }
+
+    .collaboration-info {
+        align-items: flex-start;
+    }
+
+    .collaboration-title,
+    .collaboration-para {
+        text-align: left;
+    }
+
+    .collaboration-para {
+        max-width: 520px;
+    }
+
+    .widget-work-together {
+        height: 490px;
     }
 }
