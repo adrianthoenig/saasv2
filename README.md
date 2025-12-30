@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="./img/logo.png" alt="Project Logo" width="120" />
+  <img src="https://i.imgur.com/MhhTGlu.png" alt="Project Logo" width="120" />
 </p>
+
 
 
 # SaaS Landing Page – HTML & CSS Practice
