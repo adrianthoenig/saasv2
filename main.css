@@ -337,11 +337,14 @@ button, .btn {
    ========================= */
 
 .pricing .container {
-    padding-bottom: 25px;
+    padding: 0 32px 0;
+    gap: 60px;
 }
 
 .pricing-list {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .price-board {
@@ -353,11 +356,21 @@ button, .btn {
     gap: 25px;
 }
 
+.price-board.regular-plan {
+    display: none;
+    border: 1px solid #FFE492;
+    padding: 40px 44px;
+}
+
 .text-block {
-    color: var(--text-block-color);
+    color: #212529;
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.price-board.personal .text-block {
+    color: var(--text-block-color);
 }
 
 .pricing .text-block__title {
@@ -386,10 +399,24 @@ button, .btn {
     gap: 19px;
 }
 
+.price-board.personal .bullet-points--point {
+    color: var(--text-block-color);
+}
+
 .btn-pricing {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.price-board.regular-plan .btn-pricing {
+    border: 2px solid #FFE492;
+    background: none;
+    color: #212529;
+}
+
+.price-board.regular-plan .btn-pricing:hover {
+    background-color: #FFE492;
 }
 
 /* =========================
@@ -467,6 +494,44 @@ button, .btn {
     .customization .container {
         padding: 100px 32px;
     }
+
+    /* --- PRICING ---- */
+    .pricing .container {
+        padding: 140px 20px;
+    }
+
+    .pricing-list {
+        position: relative;
+        align-items: center;
+    }
+
+    .price-board {
+        padding: 80px 44px;
+        max-width: 470px;
+    }
+
+    .price-board.regular-plan {
+        display: revert;
+        position: absolute;
+        padding: 40px 44px 40px;
+    }
+
+    .price-board.free {
+        left: -350px;
+    }
+
+    .price-board.organization {
+        right: -350px;
+    }
+
+    .pricing .text-block__title {
+        font-weight: 500;
+    }
+
+    .pricing .text-block__price {
+        font-weight: 400;
+    }
+    
 
 }
 
@@ -592,5 +657,30 @@ button, .btn {
 
     .customization-info {
         align-items: flex-start;
+    }
+
+    /* --- PRICING --- */
+    .pricing .container {
+        padding-bottom: 140px;
+    }
+
+    .price-board {
+        max-width: 340px;
+    }
+
+    .price-board.personal {
+        padding: 80px 44px;
+    }
+
+    .price-board.regular-plan {
+        position: static;
+        display: flex;
+    }
+
+    .pricing-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        align-items: center;
     }
 }
