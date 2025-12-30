@@ -48,6 +48,11 @@
     --m-features-title-font-size: 2.25rem;
     --t-features-title-font-size: 3.375rem;
     --d-features-title-font-size: 4rem;
+
+    /* Pricing font sizes */
+    --text-block-title: 1.5rem;
+    --text-block-color: #043873;;
+
 }
 
 *,
@@ -124,6 +129,20 @@ button, .btn {
     min-width: 286px;
     height: 177px;
     background-color: var(--color-primary-100);
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.info-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 /* =========================
@@ -209,13 +228,6 @@ button, .btn {
     gap: 100px;
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-}
-
 .hero-info {
     text-align: center;
     display: flex;
@@ -288,13 +300,6 @@ button, .btn {
     gap: 60px;
 }
 
-.features-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
 .title-highlight {
     position: absolute;
     z-index: -1;
@@ -314,20 +319,6 @@ button, .btn {
     gap: 100px;
 }
 
-.collaboration-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-}
-
-.collaboration-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
 .collab-title-highlight {
     position: absolute;
     z-index: -1;
@@ -342,28 +333,63 @@ button, .btn {
 }
 
 /* =========================
-   CUSTOMIZATION
+   PRICING
    ========================= */
 
-.customization .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+.pricing .container {
+    padding-bottom: 25px;
 }
 
-.customization-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+.pricing-list {
+    width: 100%;
 }
 
-.customization-info {
+.price-board {
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    gap: 25px;
+}
+
+.text-block {
+    color: var(--text-block-color);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.pricing .text-block__title {
+    font-size: var(--text-block-title);
+}
+
+.pricing .text-block__price {
+    font-size: 3rem;
+}
+
+.pricing .text-block__para {
+    font-size: 1rem;
+}
+
+.bullet-points {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.bullet-points--point {
+    color: var(--text-block-color);
+    font-size: 1rem;
+    display: flex;
+    gap: 19px;
+}
+
+.btn-pricing {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 24px;
 }
 
 /* =========================
@@ -476,8 +502,8 @@ button, .btn {
 
     /* --- HERO --- */
     .hero .container {
-        flex-direction: row;
         padding: 140px 32px 0;
+        flex-direction: row;
         justify-content: space-between;
         gap: 0;
     }
