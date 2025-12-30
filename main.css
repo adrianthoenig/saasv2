@@ -443,6 +443,45 @@ button, .btn {
 }
 
 /* =========================
+   YOUR WORK
+   ========================= */
+
+.your-work {
+    background-color: #043873;
+}
+
+.your-work .container {
+    padding: 100px 16px 140px;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.your-work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.your-work-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.your-work__title {
+    font-size: var(--font-size-title-mobile);
+}
+
+.your-work__para {
+    font-size: var(--font-size-medium);
+    line-height: 1.8;
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 
