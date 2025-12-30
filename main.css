@@ -337,14 +337,16 @@ button, .btn {
    ========================= */
 
 .pricing .container {
-    padding: 0 32px 0;
+    padding: 80px 16px;
     gap: 60px;
 }
 
 .pricing-list {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .price-board {
@@ -354,6 +356,7 @@ button, .btn {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin-bottom: 60px;
 }
 
 .price-board.regular-plan {
@@ -417,6 +420,26 @@ button, .btn {
 
 .price-board.regular-plan .btn-pricing:hover {
     background-color: #FFE492;
+}
+
+.pricing-slider {
+    width: 100px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-dot {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-primary-500);
+    border-radius: 50%;
+}
+
+.slider-dot.focus {
+    background-color: var(--text-block-color);
 }
 
 /* =========================
@@ -508,6 +531,7 @@ button, .btn {
     .price-board {
         padding: 80px 44px;
         max-width: 470px;
+        margin-bottom: 0;
     }
 
     .price-board.regular-plan {
@@ -530,6 +554,10 @@ button, .btn {
 
     .pricing .text-block__price {
         font-weight: 400;
+    }
+
+    .pricing-slider {
+        display: none;
     }
     
 
@@ -666,6 +694,7 @@ button, .btn {
 
     .price-board {
         max-width: 340px;
+        margin-bottom: 0;
     }
 
     .price-board.personal {
@@ -682,5 +711,9 @@ button, .btn {
         justify-content: center;
         gap: 24px;
         align-items: center;
+    }
+
+    .pricing-slider {
+        display: none;
     }
 }
