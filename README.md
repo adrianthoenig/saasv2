@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./img/logo.png" alt="Project Logo" width="120" />
+</p>
+
+
 # SaaS Landing Page – HTML & CSS Practice
 
 This project is a **SaaS landing page** created as a practice exercise to improve **HTML and CSS** skills, with a strong focus on layout, responsive design, and clean styling.
